@@ -13,5 +13,7 @@ function calcular() {
     let calcular = document.getElementById('resultado').innerHTML;
     if(resultado) {
         document.getElementById('resultado').innerHTML = eval(calcular);
+    }else {
+        document.getElementById('resultado').innerHTML = ""; 
     }
 }
