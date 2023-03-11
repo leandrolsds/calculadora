@@ -3,56 +3,65 @@
     padding: 0;
     border: none;
     box-sizing: border-box;
+    font-family: Helvetica;
 }
 #fundo {
     height: 100vh;
     background: linear-gradient(45deg, rgb(43, 3, 61), rgb(146, 0, 85)) no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
 }
-#titulo {
-    margin-bottom: 10px;
-}
-#calculadora {
-    box-shadow: 1px 1px 40px rgb(30, 0, 49);
-    background-color: rgba(0, 0, 0, 0.8);
-    position: absolute;
-    color: #fff;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    border-radius: 15px;
-    padding: 15px;
-    width: 270px;
-}
-#resultado {
-    border-radius: 5px;
-    text-align: end;
-    cursor: text;
-    font-size: 25px;
-    background-color: #fff;
-    height: 40px;
-    padding: 5px;
-    margin: 10px 6px;
+#calc {
+    display: flex;
+    flex-direction: column;
+    background-color: #c4c4c4;
     color: #000;
-    overflow: hidden;
+    padding: 0.5em;
+    width: 400px;
 }
-.botao {
-    border-radius: 100%;
-    margin: 3px;
-    width: 50px;
-    height: 50px;
-    font-size: 25px;
-    color: rgb(4, 93, 167);
+#calc h3 {
+    font-size: .8em;
+    font-weight: 300;
+    color: #666;
+}
+#operations {
+    text-align: right;  
+}
+#previous-operatior, #current-operatior {
+    overflow-wrap: break-word;
+    min-height: 1.6em;
+    padding: .2em;
+}
+#previous-operatior {
+    color: #777;
+}
+#current-operatior {
+    font-weight: 700;
+    font-size: 3em;
+}
+#buttons-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3px;
+}
+#buttons-container button {
+    height: 4em;
+    font-size: 1.2em;
+    background-color: #dbdbdb;
     cursor: pointer;
-    background-color: rgb(31, 31, 31);
 }
-.operadores {
-    color: rgb(189, 1, 126);
+#buttons-container .number {
+    background-color: #f3f3f3;
 }
-.operador {
-    color: #fff;
-    background-color: rgb(189, 1, 126);;
+#buttons-container button:hover {
+    background-color: #bababa;
 }
-.botao:hover {
-    background-color: #000;
+#buttons-container #equal-btn {
+    grid-column: span 2;
+    background-color: #75a5cb;
+}
+#buttons-container #equal-btn:hover {
+    background-color: #3a91d8;
 }
