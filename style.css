@@ -8,10 +8,7 @@
 #fundo {
     height: 100vh;
     background: linear-gradient(45deg, rgb(43, 3, 61), rgb(146, 0, 85)) no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 3em;
+    
 }
 #calc {
     display: flex;
@@ -19,7 +16,7 @@
     background-color: #c4c4c4;
     color: #000;
     padding: 0.5em;
-    width: 400px;
+    width: 100%;
 }
 #calc h3 {
     font-size: .8em;
@@ -64,4 +61,18 @@
 }
 #buttons-container #equal-btn:hover {
     background-color: #3a91d8;
+}
+@media screen and (min-width: 768px) {
+    #fundo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 3em;
+    }
+    #calc {
+        background-color: #c4c4c4;
+        color: #000;
+        padding: 0.5em;
+        width: 400px;
+    }
 }
